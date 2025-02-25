@@ -1,0 +1,108 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  position: relative;
+  overflow: auto;
+  padding: 0;
+  margin: 0;
+  background-color: $background-secondary;
+}
+
+.content {
+  background-color: $background-primary;
+  padding: 20px;
+
+  @media screen and (max-width: $phone-width) {
+      font-size: 16px;
+  }
+}
+
+.header-button {
+  text-align: center;
+  text-decoration: none;
+  color: $text-inverted;
+  text-wrap: nowrap;
+  cursor: pointer;
+
+  &:hover {
+    color: $interactive-normal;   
+  }
+}
+
+.dev-notice {
+  background-color: $background-warning;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: $text-normal;
+  z-index: 10;
+}
+
+.header {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: $text-inverted;
+  z-index: 10;
+
+  .left {
+    display: block;
+
+    .title {
+      font-size: 50px;
+      font-weight: bold;
+      color: $color-primary;
+
+      @media screen and (max-width: $phone-width) {
+        font-size: 40px;
+      }
+    }
+
+    .subtitle {
+      font-size: 20px;
+
+      @media screen and (max-width: $phone-width) {
+        font-size: 16px;
+      }
+    }    
+
+    a {
+      font-size: 20px;
+      margin-right: 15px;
+
+      @media screen and (max-width: $phone-width) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  gap: 20px;
+
+  color: $text-inverted;
+  width: 100%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media screen and (max-width: $phone-width) {
+    flex-direction: column;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
